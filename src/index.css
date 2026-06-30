@@ -1,0 +1,196 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 207 40% 26%;
+    --card: 0 0% 100%;
+    --card-foreground: 207 40% 26%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 207 40% 26%;
+    --primary: 207 40% 26%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 171 32% 59%;
+    --secondary-foreground: 207 40% 26%;
+    --muted: 0 0% 97%;
+    --muted-foreground: 207 20% 50%;
+    --accent: 40 35% 89%;
+    --accent-foreground: 207 40% 26%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 207 20% 88%;
+    --input: 207 20% 88%;
+    --ring: 171 32% 59%;
+    --radius: 0.625rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 207 40% 26%;
+    --sidebar-primary: 207 40% 26%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 171 32% 59%;
+    --sidebar-accent-foreground: 207 40% 26%;
+    --sidebar-border: 207 20% 88%;
+    --sidebar-ring: 171 32% 59%;
+  }
+
+  body {
+    @apply bg-white text-teal font-body antialiased;
+    font-family: 'Lato', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .glass-dark {
+    background: rgba(39, 68, 93, 0.4);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-btn {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 4px 24px rgba(39, 68, 93, 0.1);
+    transition: all 0.3s ease;
+  }
+
+  .glass-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 32px rgba(39, 68, 93, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .glass-btn-primary {
+    background: rgba(39, 68, 93, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(39, 68, 93, 0.3);
+    box-shadow: 0 4px 24px rgba(39, 68, 93, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .glass-btn-primary:hover {
+    background: rgba(39, 68, 93, 0.95);
+    box-shadow: 0 6px 32px rgba(39, 68, 93, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .glass-btn-mint {
+    background: rgba(113, 187, 178, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(113, 187, 178, 0.3);
+    box-shadow: 0 4px 24px rgba(113, 187, 178, 0.2);
+    transition: all 0.3s ease;
+  }
+
+  .glass-btn-mint:hover {
+    background: rgba(113, 187, 178, 0.95);
+    box-shadow: 0 6px 32px rgba(113, 187, 178, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .section-padding {
+    @apply py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-main {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #27445D 0%, #71BBB2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Deconstructed text styles */
+.deconstructed-text .word {
+  display: inline-block;
+  white-space: nowrap;
+  filter: blur(0px);
+  transition: opacity 0.55s ease-out, transform 0.55s ease-out, max-width 0.55s ease-out, filter 0.55s ease-out;
+}
+
+.js-active .deconstructed-text .word {
+  opacity: 0;
+  max-width: 0;
+  filter: blur(8px);
+  transform: translateY(20px);
+}
+
+.js-revealed .deconstructed-text .word {
+  opacity: 1;
+  max-width: 15rem;
+  filter: blur(0px);
+  transform: translateY(0);
+}
+
+/* Globe canvas */
+#globe-container canvas {
+  display: block;
+}
+
+/* Marquee scroll animation for testimonials */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 40s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-scroll 40s linear infinite reverse;
+  will-change: transform;
+}
+
+.animate-marquee:hover,
+.animate-marquee-reverse:hover {
+  animation-play-state: paused;
+}
