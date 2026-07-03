@@ -10,9 +10,9 @@ const steps = [
     icon: Lock,
     tag: "Your Privacy First",
     title: "Private Consultation — No Judgment",
-    desc: "Your journey begins with a one-on-one consultation with Dr. Rupali in a completely private room. No staff overhears your conversation. You are free to ask anything — no question is too sensitive, no situation is judged.",
+    desc: "Your journey begins with a one-on-one consultation with Dr. Rupali Mishra in a completely private room. No staff overhears your conversation. You are free to ask anything — no question is too sensitive, no situation is judged.",
     care: [
-      "Only Dr. Rupali present — no extra staff",
+      "Only Dr. Rupali Mishra present — no extra staff",
       "Your name is never displayed publicly",
       "No record shared with any external agency",
       "Video consultation available for international patients",
@@ -38,7 +38,7 @@ const steps = [
     icon: ClipboardList,
     tag: "Personalized Care",
     title: "Doctor Decides the Safest Method for You",
-    desc: "Based on your test results and pregnancy week, Dr. Rupali personally reviews every case and recommends the safest, most suitable method. There is no one-size-fits-all here — your health profile guides every decision.",
+    desc: "Based on your test results and pregnancy week, Dr. Rupali Mishra personally reviews every case and recommends the safest, most suitable method. There is no one-size-fits-all here — your health profile guides every decision.",
     care: [
       "Medical pill method for early pregnancies",
       "Surgical MVA/D&C for 9–20 weeks",
@@ -52,7 +52,7 @@ const steps = [
     icon: ShieldCheck,
     tag: "Expert Hands",
     title: "The Procedure — Sterile, Gentle, Expert",
-    desc: "The procedure is performed by Dr. Rupali herself in a fully sterile, private procedure room. Equipment is hospital-grade and sterilized before every use. We move at your pace — if you need a moment, we stop. Your comfort is not optional.",
+    desc: "The procedure is performed by Dr. Rupali Mishra herself in a fully sterile, private procedure room. Equipment is hospital-grade and sterilized before every use. We move at your pace — if you need a moment, we stop. Your comfort is not optional.",
     care: [
       "Conducted only by certified MTP surgeon",
       "WHO-protocol sterilization of all instruments",
@@ -66,7 +66,7 @@ const steps = [
     icon: HeartPulse,
     tag: "Post-Procedure",
     title: "Recovery & Close Monitoring",
-    desc: "After the procedure, you rest in a private recovery room for 2–3 hours while our nursing team monitors your vitals every 30 minutes. You are not left alone. We only discharge you when Dr. Rupali personally confirms you are stable and comfortable.",
+    desc: "After the procedure, you rest in a private recovery room for 2–3 hours while our nursing team monitors your vitals every 30 minutes. You are not left alone. We only discharge you when Dr. Rupali Mishra personally confirms you are stable and comfortable.",
     care: [
       "Private recovery room — no shared space",
       "Vitals checked every 30 minutes",
@@ -80,11 +80,11 @@ const steps = [
     icon: PhoneCall,
     tag: "Long-Term Support",
     title: "Discharge, Aftercare & 30-Day Support",
-    desc: "When you leave, you carry a clear written prescription and aftercare plan. Our team checks in via WhatsApp in 24 hours, and Dr. Rupali stays reachable for any question for 30 full days. Your care doesn't end at the clinic door.",
+    desc: "When you leave, you carry a clear written prescription and aftercare plan. Our team checks in via WhatsApp in 24 hours, and Dr. Rupali Mishra stays reachable for any question for 30 full days. Your care doesn't end at the clinic door.",
     care: [
       "Written aftercare instructions in English",
       "WhatsApp check-in within 24 hours",
-      "Dr. Rupali available for 30 days post-discharge",
+      "Dr. Rupali Mishra available for 30 days post-discharge",
       "Follow-up scan arranged if needed",
     ],
     img: "/images/patient-couple.jpg",
@@ -120,19 +120,19 @@ export default function ProcessSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="section-padding" style={{ background: "#f8fffe" }}>
+    <section ref={sectionRef} className="section-padding" style={{ background: "#EFF6FF" }}>
       <div className="container-main">
 
         {/* Header */}
         <div className="proc-header text-center mb-14 md:mb-20">
-          <p className="text-xs font-body font-medium tracking-[0.25em] uppercase text-mint mb-3">
+          <p className="text-xs font-body font-medium tracking-[0.25em] uppercase mb-3" style={{ color: "#0EA5E9" }}>
             Our Process
           </p>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-[2.8rem] font-semibold text-teal leading-tight mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-[2.8rem] font-semibold leading-tight mb-4" style={{ color: "#0C1A2E" }}>
             How We Perform Every Abortion —<br />
             <span
               className="bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #71BBB2, #3a7a72)" }}
+              style={{ backgroundImage: "linear-gradient(90deg, #0EA5E9, #0284C7)" }}
             >
               Step by Step, With Full Care.
             </span>
@@ -159,7 +159,7 @@ export default function ProcessSection() {
                     {/* Step number watermark */}
                     <span
                       className="absolute bottom-3 right-4 font-display font-black leading-none select-none"
-                      style={{ fontSize: "5rem", color: "rgba(113,187,178,0.2)" }}
+                      style={{ fontSize: "5rem", color: "rgba(14,165,233,0.2)" }}
                     >
                       {s.num}
                     </span>
@@ -172,7 +172,7 @@ export default function ProcessSection() {
                   <div className="flex items-center gap-2 mb-4">
                     <span
                       className="text-[10px] font-body font-bold px-3 py-1 rounded-full"
-                      style={{ background: "rgba(113,187,178,0.1)", color: "#71BBB2", border: "1px solid rgba(113,187,178,0.22)" }}
+                      style={{ background: "rgba(14,165,233,0.1)", color: "#0EA5E9", border: "1px solid rgba(14,165,233,0.22)" }}
                     >
                       Step {s.num}
                     </span>
@@ -183,11 +183,11 @@ export default function ProcessSection() {
                   <div className="flex items-center gap-3 mb-3">
                     <div
                       className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                      style={{ background: "rgba(113,187,178,0.1)", border: "1px solid rgba(113,187,178,0.2)" }}
+                      style={{ background: "rgba(14,165,233,0.1)", border: "1px solid rgba(14,165,233,0.2)" }}
                     >
-                      <s.icon className="w-[18px] h-[18px] text-mint" />
+                      <s.icon className="w-[18px] h-[18px]" style={{ color: "#0EA5E9" }} />
                     </div>
-                    <h3 className="font-display font-semibold text-teal text-xl sm:text-2xl leading-tight">
+                    <h3 className="font-display font-semibold text-xl sm:text-2xl leading-tight" style={{ color: "#0C1A2E" }}>
                       {s.title}
                     </h3>
                   </div>
@@ -198,13 +198,13 @@ export default function ProcessSection() {
                   </p>
 
                   {/* Care points */}
-                  <p className="text-[10px] font-body font-bold uppercase tracking-widest text-mint mb-3">
+                  <p className="text-[10px] font-body font-bold uppercase tracking-widest mb-3" style={{ color: "#0EA5E9" }}>
                     How We Ensure Your Safety
                   </p>
                   <ul className="space-y-2.5">
                     {s.care.map((c) => (
                       <li key={c} className="flex items-start gap-2.5">
-                        <ShieldCheck className="w-4 h-4 text-mint flex-shrink-0 mt-0.5" />
+                        <ShieldCheck className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "#0EA5E9" }} />
                         <span className="text-sm font-body" style={{ color: "rgba(15,34,51,0.65)" }}>{c}</span>
                       </li>
                     ))}

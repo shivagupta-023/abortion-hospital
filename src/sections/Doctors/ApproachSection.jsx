@@ -10,42 +10,42 @@ const points = [
     num: "01",
     title: "Certified by the Government. Accountable to You.",
     desc: "Our clinic is officially registered under the MTP Act (Reg. DL/MTP/86/SED/2020). Every procedure is performed by a licensed MTP specialist — not a general practitioner. You are always in certified hands.",
-    color: "#71BBB2",
+    color: "#0EA5E9",
   },
   {
     icon: HeartHandshake,
     num: "02",
     title: "Zero Judgment. Zero Lectures.",
     desc: "We do not ask why. We do not offer opinions on your decision. Our only job is to make sure you are safe, informed, and comfortable. Every member of our team — from reception to recovery — follows this principle.",
-    color: "#71BBB2",
+    color: "#0EA5E9",
   },
   {
     icon: Globe,
     num: "03",
     title: "Built for International Patients.",
     desc: "We have served patients from 25+ countries. Our team speaks multiple languages, handles visa invitation letters, arranges airport pickup, and guides you through every step — from your first WhatsApp message to your flight home.",
-    color: "#5ba3a0",
+    color: "#38BDF8",
   },
   {
     icon: Lock,
     num: "04",
     title: "Privacy That Goes Beyond Discretion.",
     desc: "Your name never appears on any public board. Your records are never shared without your written consent. Our clinic entrance is private, consultation rooms are soundproofed, and our staff are bound by strict confidentiality protocols.",
-    color: "#5ba3a0",
+    color: "#38BDF8",
   },
   {
     icon: BadgeCheck,
     num: "05",
     title: "One Specialist Does It All.",
-    desc: "Dr. Rupali personally handles your consultation, procedure, and post-operative review. You are not passed between doctors. The same expert who meets you on Day 1 sees you through to full recovery.",
-    color: "#27445D",
+    desc: "Dr. Rupali Mishra personally handles your consultation, procedure, and post-operative review. You are not passed between doctors. The same expert who meets you on Day 1 sees you through to full recovery.",
+    color: "#0284C7",
   },
   {
     icon: PhoneCall,
     num: "06",
     title: "30 Days of Support After You Leave.",
-    desc: "Your care does not end at discharge. Dr. Rupali stays reachable via WhatsApp for 30 full days. Our team checks in within 24 hours of your procedure and arranges a follow-up scan if needed — wherever you are in the world.",
-    color: "#27445D",
+    desc: "Your care does not end at discharge. Dr. Rupali Mishra stays reachable via WhatsApp for 30 full days. Our team checks in within 24 hours of your procedure and arranges a follow-up scan if needed — wherever you are in the world.",
+    color: "#0284C7",
   },
 ];
 
@@ -79,20 +79,20 @@ export default function ApproachSection() {
         {/* Header */}
         <div className="approach-header mb-12 md:mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <div>
-            <p className="text-xs font-body font-medium tracking-[0.25em] uppercase text-mint mb-3">
+            <p className="text-xs font-body font-medium tracking-[0.25em] uppercase mb-3" style={{ color: "#0EA5E9" }}>
               Why Choose Us
             </p>
-            <h2 className="font-display text-3xl sm:text-4xl md:text-[2.8rem] font-semibold text-teal leading-tight">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-[2.8rem] font-semibold leading-tight" style={{ color: "#0C1A2E" }}>
               What Makes Our Doctors <br />
               <span
                 className="bg-clip-text text-transparent"
-                style={{ backgroundImage: "linear-gradient(90deg, #71BBB2, #3a7a72)" }}
+                style={{ backgroundImage: "linear-gradient(90deg, #0EA5E9, #0284C7)" }}
               >
                 Different.
               </span>
             </h2>
           </div>
-          <p className="text-sm sm:text-base font-body text-teal/55 max-w-sm lg:text-right">
+          <p className="text-sm sm:text-base font-body max-w-sm lg:text-right" style={{ color: "rgba(12,26,46,0.55)" }}>
             Six principles our team follows for every single patient — no exceptions, no compromises.
           </p>
         </div>
@@ -104,8 +104,8 @@ export default function ApproachSection() {
               key={p.num}
               className="approach-card group relative rounded-3xl p-6 overflow-hidden hover:-translate-y-1 transition-all duration-300 hover:shadow-lg"
               style={{
-                background: "#fafffe",
-                border: "1.5px solid rgba(113,187,178,0.13)",
+                background: "#F8FBFF",
+                border: "1.5px solid rgba(14,165,233,0.13)",
               }}
             >
               {/* Number watermark */}
@@ -125,10 +125,10 @@ export default function ApproachSection() {
               </div>
 
               {/* Text */}
-              <h3 className="font-display font-semibold text-teal text-base sm:text-lg leading-snug mb-3">
+              <h3 className="font-display font-semibold text-base sm:text-lg leading-snug mb-3" style={{ color: "#0C1A2E" }}>
                 {p.title}
               </h3>
-              <p className="text-sm font-body text-teal/60 leading-relaxed">
+              <p className="text-sm font-body leading-relaxed" style={{ color: "rgba(12,26,46,0.6)" }}>
                 {p.desc}
               </p>
 

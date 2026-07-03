@@ -8,6 +8,8 @@ export default function Layout() {
     <>
       <Navbar />
       <Outlet />
+      {/* bottom clearance for floating bottom nav on mobile */}
+      <div className="lg:hidden h-24" />
       <Footer />
       <FloatingCTA />
     </>

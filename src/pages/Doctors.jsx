@@ -3,6 +3,7 @@ import TeamSection from '../sections/Doctors/TeamSection';
 import CredentialsSection from '../sections/Doctors/CredentialsSection';
 import ApproachSection from '../sections/Doctors/ApproachSection';
 import TestimonialsSection from '../sections/Doctors/TestimonialsSection';
+import CtaSection from '../sections/About/CtaSection';
 
 export default function Doctors() {
   return (
@@ -12,6 +13,7 @@ export default function Doctors() {
       <CredentialsSection />
       <ApproachSection />
       <TestimonialsSection />
+      <CtaSection />
     </main>
   );
 }

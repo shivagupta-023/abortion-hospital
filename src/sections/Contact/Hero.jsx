@@ -30,7 +30,7 @@ export default function ContactHero() {
       className="relative overflow-hidden"
       style={{
         minHeight: "100vh",
-        background: "linear-gradient(160deg,#050f18 0%,#071520 60%,#0a1e2e 100%)",
+        background: "linear-gradient(160deg, #EFF6FF 0%, #DBEAFE 60%, #E0F2FE 100%)",
       }}
     >
       <style>{`
@@ -62,7 +62,7 @@ export default function ContactHero() {
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
-          backgroundImage: "radial-gradient(rgba(113,187,178,0.08) 1px, transparent 1px)",
+          backgroundImage: "radial-gradient(rgba(14,165,233,0.12) 1px, transparent 1px)",
           backgroundSize: "28px 28px",
         }}
       />
@@ -74,7 +74,7 @@ export default function ContactHero() {
           top: "52%", right: "18%",
           width: "380px", height: "380px",
           transform: "translate(50%, -50%)",
-          background: "radial-gradient(circle,rgba(113,187,178,0.18) 0%,transparent 70%)",
+          background: "radial-gradient(circle, rgba(14,165,233,0.2) 0%, transparent 70%)",
           filter: "blur(30px)",
         }}
       />
@@ -96,12 +96,12 @@ export default function ContactHero() {
                   <Geography
                     key={geo.rsmKey}
                     geography={geo}
-                    fill="#0d2236"
-                    stroke="#1b3d56"
+                    fill="#BFDBFE"
+                    stroke="#93C5FD"
                     strokeWidth={0.5}
                     style={{
                       default: { outline: "none" },
-                      hover:   { outline: "none", fill: "#122c44" },
+                      hover:   { outline: "none", fill: "#A5C9FE" },
                       pressed: { outline: "none" },
                     }}
                   />
@@ -112,11 +112,10 @@ export default function ContactHero() {
             {/* Connection lines — country → Delhi */}
             {countries.map((c) => (
               <g key={`lines-${c.name}`}>
-                {/* Animated draw-in */}
                 <Line
                   from={c.coords}
                   to={DELHI}
-                  stroke="rgba(113,187,178,0.35)"
+                  stroke="rgba(14,165,233,0.4)"
                   strokeWidth={1.3}
                   strokeLinecap="round"
                   style={{
@@ -125,11 +124,10 @@ export default function ContactHero() {
                     animation: `drawLine 1.6s ease-out ${c.delay}s forwards`,
                   }}
                 />
-                {/* Flowing glow dots */}
                 <Line
                   from={c.coords}
                   to={DELHI}
-                  stroke="rgba(113,187,178,0.75)"
+                  stroke="rgba(14,165,233,0.8)"
                   strokeWidth={1.3}
                   strokeLinecap="round"
                   style={{
@@ -144,16 +142,13 @@ export default function ContactHero() {
             {/* Country markers */}
             {countries.map((c) => (
               <Marker key={c.name} coordinates={c.coords}>
-                {/* Outer ring */}
                 <circle
                   r={7}
-                  fill="rgba(113,187,178,0.12)"
-                  stroke="rgba(113,187,178,0.45)"
+                  fill="rgba(14,165,233,0.15)"
+                  stroke="rgba(14,165,233,0.55)"
                   strokeWidth={1.2}
                 />
-                {/* Centre dot */}
-                <circle r={3} fill="#71BBB2" />
-                {/* Label */}
+                <circle r={3} fill="#0EA5E9" />
                 <text
                   x={c.lx}
                   y={c.ly}
@@ -162,7 +157,7 @@ export default function ContactHero() {
                     fontSize: "7px",
                     fontFamily: "system-ui, sans-serif",
                     fontWeight: 600,
-                    fill: "rgba(239,233,213,0.88)",
+                    fill: "rgba(12,26,46,0.85)",
                   }}
                 >
                   {c.name}
@@ -172,32 +167,28 @@ export default function ContactHero() {
 
             {/* New Delhi — destination marker */}
             <Marker coordinates={DELHI}>
-              {/* Pulse rings */}
               <circle
                 r={14}
                 fill="none"
-                stroke="rgba(113,187,178,0.55)"
+                stroke="rgba(14,165,233,0.6)"
                 strokeWidth={1.5}
                 className="delhi-ring-a"
               />
               <circle
                 r={14}
                 fill="none"
-                stroke="rgba(113,187,178,0.55)"
+                stroke="rgba(14,165,233,0.6)"
                 strokeWidth={1.5}
                 className="delhi-ring-b"
               />
-              {/* Soft glow */}
-              <circle r={20} fill="rgba(113,187,178,0.12)" />
-              {/* Main dot */}
-              <circle r={9} fill="#71BBB2" />
+              <circle r={20} fill="rgba(14,165,233,0.15)" />
+              <circle r={9} fill="#0EA5E9" />
               <circle r={4} fill="white" />
-              {/* Label chip */}
               <rect
                 x={14} y={-16}
                 width={80} height={32}
                 rx={7}
-                fill="rgba(113,187,178,0.94)"
+                fill="rgba(14,165,233,0.92)"
               />
               <text
                 x={21} y={-2}
@@ -215,10 +206,10 @@ export default function ContactHero() {
                 style={{
                   fontSize: "8px",
                   fontFamily: "system-ui, sans-serif",
-                  fill: "rgba(255,255,255,0.72)",
+                  fill: "rgba(255,255,255,0.82)",
                 }}
               >
-                Our Clinic ✦
+                Our Hospital ✦
               </text>
             </Marker>
           </ComposableMap>

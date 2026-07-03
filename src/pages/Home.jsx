@@ -32,9 +32,9 @@ export default function Home() {
   }, [scrollTarget]);
 
   return (
-    <div className="relative">
+    <div className="relative w-full overflow-x-hidden">
       {!introComplete && <IntroAnimation onComplete={handleIntroComplete} />}
-      <main>
+      <main className="w-full overflow-x-hidden">
         <Hero />
         <TrustIndicators />
         <GlobeSection />

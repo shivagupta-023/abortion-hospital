@@ -137,18 +137,18 @@ export default function StepsSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="section-padding bg-cream/20">
+    <section ref={sectionRef} className="section-padding" style={{ background: "#EFF6FF" }}>
       <div className="container-main">
 
         {/* Header */}
         <div className="steps-header text-center mb-14 md:mb-20">
-          <p className="text-xs font-body font-medium tracking-[0.25em] uppercase text-mint mb-3">
+          <p className="text-xs font-body font-medium tracking-[0.25em] uppercase mb-3" style={{ color: "#0EA5E9" }}>
             Step by Step
           </p>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-teal mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold mb-4" style={{ color: "#0C1A2E" }}>
             The Complete Journey
           </h2>
-          <p className="text-sm sm:text-base font-body text-teal/60 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base font-body max-w-2xl mx-auto" style={{ color: "rgba(12,26,46,0.6)" }}>
             Here's exactly what happens from your first message to your safe return home — no surprises, no stress.
           </p>
         </div>
@@ -176,7 +176,7 @@ export default function StepsSection() {
                     {/* Step number watermark */}
                     <span
                       className="absolute bottom-3 right-4 font-display font-black leading-none select-none"
-                      style={{ fontSize: "5rem", color: "rgba(113,187,178,0.18)" }}
+                      style={{ fontSize: "5rem", color: "rgba(14,165,233,0.18)" }}
                     >
                       {s.num}
                     </span>
@@ -190,40 +190,40 @@ export default function StepsSection() {
                   <div className="flex items-center gap-2 mb-4">
                     <span
                       className="text-[10px] font-body font-bold px-3 py-1 rounded-full"
-                      style={{ background: "rgba(113,187,178,0.12)", color: "#71BBB2", border: "1px solid rgba(113,187,178,0.25)" }}
+                      style={{ background: "rgba(14,165,233,0.12)", color: "#0EA5E9", border: "1px solid rgba(14,165,233,0.25)" }}
                     >
                       Step {s.num}
                     </span>
-                    <span className="text-[11px] font-body text-teal/40">{s.tag}</span>
+                    <span className="text-[11px] font-body" style={{ color: "rgba(12,26,46,0.4)" }}>{s.tag}</span>
                   </div>
 
                   {/* Icon + Title */}
                   <div className="flex items-center gap-3 mb-3">
                     <div
                       className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
-                      style={{ background: "rgba(113,187,178,0.1)", border: "1px solid rgba(113,187,178,0.2)" }}
+                      style={{ background: "rgba(14,165,233,0.1)", border: "1px solid rgba(14,165,233,0.2)" }}
                     >
-                      <s.icon className="w-[18px] h-[18px] text-mint" />
+                      <s.icon className="w-[18px] h-[18px]" style={{ color: "#0EA5E9" }} />
                     </div>
-                    <h3 className="font-display font-semibold text-teal text-xl sm:text-2xl">
+                    <h3 className="font-display font-semibold text-xl sm:text-2xl" style={{ color: "#0C1A2E" }}>
                       {s.title}
                     </h3>
                   </div>
 
                   {/* Description */}
-                  <p className="text-sm sm:text-[15px] font-body text-teal/65 leading-relaxed mb-6">
+                  <p className="text-sm sm:text-[15px] font-body leading-relaxed mb-6" style={{ color: "rgba(12,26,46,0.65)" }}>
                     {s.desc}
                   </p>
 
                   {/* What we handle */}
-                  <p className="text-[11px] font-body font-semibold uppercase tracking-widest text-mint mb-3">
+                  <p className="text-[11px] font-body font-semibold uppercase tracking-widest mb-3" style={{ color: "#0EA5E9" }}>
                     What We Handle
                   </p>
                   <ul className="space-y-2">
                     {s.handles.map((h) => (
                       <li key={h} className="flex items-start gap-2.5">
-                        <CheckCircle2 className="w-4 h-4 text-mint flex-shrink-0 mt-0.5" />
-                        <span className="text-sm font-body text-teal/70">{h}</span>
+                        <CheckCircle2 className="w-4 h-4 flex-shrink-0 mt-0.5" style={{ color: "#0EA5E9" }} />
+                        <span className="text-sm font-body" style={{ color: "rgba(12,26,46,0.7)" }}>{h}</span>
                       </li>
                     ))}
                   </ul>

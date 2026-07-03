@@ -264,9 +264,9 @@ export default function GlobeSection() {
         }} />
       </div>
 
-      <div className="section-padding relative z-10 py-16 md:py-24">
-        <div className="container-main max-w-7xl mx-auto px-5">
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-8 items-center">
+      <div className="section-padding relative z-10 py-10 sm:py-14 md:py-24">
+        <div className="container-main">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-8 items-center">
             
             {/* LEFT — Content */}
             <div>
@@ -319,7 +319,7 @@ export default function GlobeSection() {
             <div className="relative flex items-center justify-center">
               <div className="absolute inset-0 pointer-events-none"
                 style={{ background: "radial-gradient(circle at center, rgba(113,187,178,0.1) 0%, transparent 70%)" }} />
-              <div ref={canvasRef} className="w-full select-none h-[300px] sm:h-[420px] lg:h-[580px]" />
+              <div ref={canvasRef} className="w-full max-w-full select-none h-[300px] sm:h-[420px] lg:h-[580px] overflow-hidden" />
             </div>
 
           </div>

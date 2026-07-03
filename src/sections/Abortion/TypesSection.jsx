@@ -11,9 +11,9 @@ const types = [
     label: "Medical Abortion",
     method: "Abortion Pill (MTP Kit)",
     icon: Pill,
-    accent: "#71BBB2",
-    accentDim: "rgba(113,187,178,0.1)",
-    accentBorder: "rgba(113,187,178,0.25)",
+    accent: "#0EA5E9",
+    accentDim: "rgba(14,165,233,0.1)",
+    accentBorder: "rgba(14,165,233,0.25)",
     points: [
       "Non-surgical — no operation needed",
       "Taken as pills under doctor supervision",
@@ -29,9 +29,9 @@ const types = [
     label: "Surgical Abortion",
     method: "MVA / D&C / D&E",
     icon: Scissors,
-    accent: "#27445D",
-    accentDim: "rgba(39,68,93,0.08)",
-    accentBorder: "rgba(39,68,93,0.2)",
+    accent: "#0284C7",
+    accentDim: "rgba(2,132,199,0.08)",
+    accentBorder: "rgba(2,132,199,0.2)",
     points: [
       "Safe in-clinic procedure (15–30 mins)",
       "Performed under mild sedation or local",
@@ -48,9 +48,9 @@ const types = [
     label: "Late Term Abortion",
     method: "Medical Board Approved",
     icon: HeartPulse,
-    accent: "#5ba3a0",
-    accentDim: "rgba(91,163,160,0.08)",
-    accentBorder: "rgba(91,163,160,0.22)",
+    accent: "#38BDF8",
+    accentDim: "rgba(56,189,248,0.08)",
+    accentBorder: "rgba(56,189,248,0.22)",
     points: [
       "Legal under MTP (Amendment) Act 2021",
       "We handle the Medical Board process",
@@ -105,10 +105,10 @@ export default function TypesSection() {
 
         {/* Header */}
         <div className="types-header text-center mb-12 md:mb-16">
-          <p className="text-xs font-body font-medium tracking-[0.25em] uppercase text-mint mb-3">
+          <p className="text-xs font-body font-medium tracking-[0.25em] uppercase mb-3" style={{ color: "#0EA5E9" }}>
             Our Services
           </p>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-[2.8rem] font-semibold text-teal leading-tight mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-[2.8rem] font-semibold leading-tight mb-4" style={{ color: "#0C1A2E" }}>
             Which Option Is Right for You?
           </h2>
           <p className="text-sm sm:text-base font-body max-w-xl mx-auto" style={{ color: "rgba(15,34,51,0.5)" }}>
@@ -121,7 +121,7 @@ export default function TypesSection() {
           {types.map((t) => (
             <div
               key={t.label}
-              className="type-card relative rounded-3xl p-7 flex flex-col transition-shadow duration-300 hover:shadow-xl"
+              className="type-card relative rounded-3xl p-5 sm:p-7 flex flex-col transition-shadow duration-300 hover:shadow-xl"
               style={{
                 border: `1.5px solid ${t.accentBorder}`,
                 background: t.featured
@@ -153,7 +153,7 @@ export default function TypesSection() {
               </div>
 
               {/* Title */}
-              <h3 className="font-display font-semibold text-teal text-xl mb-1">
+              <h3 className="font-display font-semibold text-xl mb-1" style={{ color: "#0C1A2E" }}>
                 {t.label}
               </h3>
               <p
@@ -183,7 +183,7 @@ export default function TypesSection() {
 
               {/* CTA */}
               <a
-                href="https://wa.me/911141590000"
+                href="https://wa.me/918800905938"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-xs font-body font-semibold transition-all duration-200 hover:opacity-90"
@@ -204,11 +204,11 @@ export default function TypesSection() {
         <p className="text-center text-xs font-body mt-8" style={{ color: "rgba(15,34,51,0.35)" }}>
           Not sure how many weeks you are?{" "}
           <a
-            href="https://wa.me/911141590000"
+            href="https://wa.me/918800905938"
             target="_blank"
             rel="noopener noreferrer"
             className="underline underline-offset-2 hover:opacity-70 transition-opacity"
-            style={{ color: "#71BBB2" }}
+            style={{ color: "#0EA5E9" }}
           >
             WhatsApp us — we'll guide you.
           </a>

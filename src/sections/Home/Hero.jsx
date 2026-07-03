@@ -1,4 +1,4 @@
-// import { useEffect, useRef } from "react";
+﻿// import { useEffect, useRef } from "react";
 // import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import { Phone, MessageCircle, Calendar, ArrowDown } from "lucide-react";
@@ -178,7 +178,7 @@
 //               Book Online Consultation
 //             </a>
 //             <a
-//     href="https://wa.me/911141590000"
+//     href="https://wa.me/918800905938"
 //     target="_blank"
 //     rel="noopener noreferrer"
 //     className="glass-btn-mint text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-sm font-body font-semibold flex items-center gap-2 w-full sm:w-auto justify-center"
@@ -307,17 +307,36 @@ export default function Hero() {
       id="hero"
       ref={sectionRef}
       className="relative h-screen w-full overflow-hidden"
-      style={{ background: "linear-gradient(135deg, #071520 0%, #0f2233 50%, #0d2e28 100%)" }}
+      style={{ background: "linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 45%, #E0F2FE 100%)" }}
     >
-      {/* Ambient glow blobs */}
+      {/* Ambient glow blobs — desktop only */}
       <div
-        className="absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(ellipse, rgba(113,187,178,0.07) 0%, transparent 70%)" }}
+        className="hidden lg:block absolute top-1/3 left-1/4 w-[500px] h-[500px] rounded-full pointer-events-none"
+        style={{ background: "radial-gradient(ellipse, rgba(14,165,233,0.1) 0%, transparent 70%)" }}
       />
       <div
-        className="absolute bottom-0 right-1/3 w-96 h-96 rounded-full pointer-events-none"
-        style={{ background: "radial-gradient(ellipse, rgba(113,187,178,0.05) 0%, transparent 70%)" }}
+        className="hidden lg:block absolute bottom-0 right-1/3 w-96 h-96 rounded-full pointer-events-none"
+        style={{ background: "radial-gradient(ellipse, rgba(56,189,248,0.08) 0%, transparent 70%)" }}
       />
+
+      {/* ══════════════════════════════════════
+          MOBILE ONLY — doctor image background
+      ══════════════════════════════════════ */}
+      <div className="lg:hidden absolute inset-0 z-0">
+        {/* Doctor image — fills top portion */}
+        <img
+          src="/doctors/dr-rupali.jpeg"
+          alt="Dr. Rupali Mishra — Founder and Sonologist"
+          className="w-full h-full object-cover object-top"
+        />
+        {/* Gradient: transparent top → light blue bottom */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: "linear-gradient(to bottom, rgba(219,234,254,0.2) 0%, rgba(219,234,254,0.35) 35%, rgba(219,234,254,0.88) 58%, #DBEAFE 78%)",
+          }}
+        />
+      </div>
 
       {/* Main content grid */}
       <div
@@ -328,26 +347,27 @@ export default function Hero() {
         {/* ══════════════════════════════════════
             LEFT — Content
         ══════════════════════════════════════ */}
-        <div className="lg:col-span-7 flex flex-col justify-center py-24 lg:py-0 lg:pr-10">
+        <div className="lg:col-span-7 flex flex-col justify-center lg:py-0 lg:pr-10">
 
           {/* Trust badge */}
           <div
-            className="hero-badge inline-flex items-center gap-2 rounded-full px-4 py-1.5 mb-6 w-fit"
-            style={{ background: "rgba(113,187,178,0.12)", border: "1px solid rgba(113,187,178,0.3)" }}
+            className="hero-badge inline-flex items-center gap-2 rounded-full px-3 sm:px-4 py-1.5 mb-2 sm:mb-6 w-fit"
+            style={{ background: "rgba(14,165,233,0.12)", border: "1px solid rgba(14,165,233,0.35)" }}
           >
-            <ShieldCheck className="w-3.5 h-3.5 text-mint" />
-            <span className="text-[11px] font-body text-mint tracking-widest font-semibold uppercase">
-              Government Registered MTP Hospital · New Delhi, India
+            <ShieldCheck className="w-3 h-3 sm:w-3.5 sm:h-3.5" style={{ color: "#0284C7" }} />
+            <span className="text-[10px] sm:text-[11px] font-body tracking-wide sm:tracking-widest font-semibold uppercase" style={{ color: "#0284C7" }}>
+              <span className="hidden sm:inline">Government Registered MTP Hospital · New Delhi, India</span>
+              <span className="sm:hidden">Govt. Registered MTP Hospital</span>
             </span>
           </div>
 
           {/* Headline */}
-          <h1 className="font-display font-semibold leading-[1.1] mb-5 text-4xl sm:text-5xl lg:text-[3.4rem]">
-            <span className="hero-line block text-white">Safe &amp; Legal</span>
-            <span className="hero-line block text-white">Abortion Care</span>
+          <h1 className="font-display font-semibold leading-[1.18] mb-3 sm:mb-5 text-3xl sm:text-4xl lg:text-[2.6rem] xl:text-[2.8rem]">
+            <span className="hero-line block" style={{ color: "#0C1A2E" }}>Safe &amp; Legal</span>
+            <span className="hero-line block" style={{ color: "#0C1A2E" }}>Abortion Care</span>
             <span
               className="hero-line block bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #71BBB2, #a8e6df)" }}
+              style={{ backgroundImage: "linear-gradient(90deg, #0EA5E9, #38BDF8)" }}
             >
               for International Patients
             </span>
@@ -355,42 +375,42 @@ export default function Hero() {
 
           {/* Tagline */}
           <p
-            className="hero-sub text-base sm:text-lg font-body font-medium mb-2"
-            style={{ color: "rgba(239,233,213,0.8)" }}
+            className="hero-sub text-sm sm:text-lg font-body font-medium mb-2 sm:mb-2"
+            style={{ color: "rgba(12,26,46,0.75)" }}
           >
             Confidential. Compassionate. Complete.
           </p>
 
-          {/* Description */}
+          {/* Description — hidden on mobile (saves space), visible on sm+ */}
           <p
-            className="hero-sub text-sm sm:text-[15px] font-body leading-relaxed mb-8 max-w-lg"
-            style={{ color: "rgba(239,233,213,0.5)" }}
+            className="hero-sub hidden sm:block text-sm sm:text-[15px] font-body leading-relaxed mb-6 lg:mb-8 max-w-lg"
+            style={{ color: "rgba(12,26,46,0.55)" }}
           >
             Government-registered hospital in New Delhi providing safe, legal abortion care up to 24 weeks — including visa support, airport transfers, accommodation, and post-treatment follow-up.
           </p>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row gap-3 mb-10">
+          <div className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 mb-4 sm:mb-10">
             <a
               href="#contact"
               className="hero-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-body font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg"
               style={{
-                background: "linear-gradient(135deg, #71BBB2 0%, #3a5f7d 100%)",
-                boxShadow: "0 4px 22px rgba(113,187,178,0.35)",
+                background: "linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%)",
+                boxShadow: "0 4px 22px rgba(14,165,233,0.35)",
               }}
             >
               <Calendar className="w-4 h-4" />
               Book Online Consultation
             </a>
             <a
-              href="https://wa.me/911141590000"
+              href="https://wa.me/918800905938"
               target="_blank"
               rel="noopener noreferrer"
               className="hero-cta inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full text-sm font-body font-semibold transition-all duration-300 hover:-translate-y-0.5"
               style={{
-                background: "rgba(113,187,178,0.1)",
-                border: "1px solid rgba(113,187,178,0.32)",
-                color: "#71BBB2",
+                background: "rgba(14,165,233,0.1)",
+                border: "1px solid rgba(14,165,233,0.35)",
+                color: "#0284C7",
               }}
             >
               <MessageCircle className="w-4 h-4" />
@@ -398,21 +418,21 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Stats row */}
-          <div className="flex flex-wrap gap-3">
+          {/* Stats row — 4 boxes in one row on mobile */}
+          <div className="grid grid-cols-4 gap-2 sm:flex sm:flex-wrap sm:gap-3">
             {stats.map((s) => (
               <div
                 key={s.label}
-                className="hero-stat rounded-xl px-4 py-2.5 text-center min-w-[72px]"
+                className="hero-stat rounded-xl px-2 sm:px-4 py-2.5 text-center"
                 style={{
-                  background: "rgba(113,187,178,0.07)",
-                  border: "1px solid rgba(113,187,178,0.14)",
+                  background: "rgba(14,165,233,0.08)",
+                  border: "1px solid rgba(14,165,233,0.2)",
                 }}
               >
                 <div
-                  className="font-display font-bold text-xl leading-none mb-0.5"
+                  className="font-display font-bold text-base sm:text-xl leading-none mb-0.5"
                   style={{
-                    background: "linear-gradient(90deg,#71BBB2,#a8e6df)",
+                    background: "linear-gradient(90deg, #0EA5E9, #38BDF8)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -421,8 +441,8 @@ export default function Hero() {
                   {s.value}
                 </div>
                 <div
-                  className="text-[10px] font-body"
-                  style={{ color: "rgba(239,233,213,0.4)" }}
+                  className="text-[9px] sm:text-[10px] font-body leading-tight"
+                  style={{ color: "rgba(12,26,46,0.5)" }}
                 >
                   {s.label}
                 </div>
@@ -440,7 +460,7 @@ export default function Hero() {
           <div
             className="absolute bottom-0 left-1/2 -translate-x-1/2 w-96 h-[75%] pointer-events-none"
             style={{
-              background: "radial-gradient(ellipse at 50% 85%, rgba(113,187,178,0.18) 0%, transparent 65%)",
+              background: "radial-gradient(ellipse at 50% 85%, rgba(14,165,233,0.2) 0%, transparent 65%)",
             }}
           />
 
@@ -448,36 +468,36 @@ export default function Hero() {
           <div className="hero-img relative w-[80%] h-[70%] flex items-center">
 
             <img
-              src="/images/dr-shashi.jpg"
-              alt="Senior Gynecologist"
+              src="/doctors/dr-rupali.jpeg"
+              alt="Dr. Rupali Mishra — Founder and Sonologist"
               className="w-full h-full object-cover object-top select-none"
               style={{ borderRadius: "2rem" }}
             />
 
-            {/* Top fade — blends into dark bg */}
+            {/* Top fade — blends into light blue bg */}
             <div
               className="absolute top-0 left-0 right-0 h-36 pointer-events-none"
-              style={{ background: "linear-gradient(to bottom, #0f2233 0%, transparent 100%)" }}
+              style={{ background: "linear-gradient(to bottom, #DBEAFE 0%, transparent 100%)" }}
             />
 
             {/* ── Floating card 1 — top left (registration) ── */}
             <div
               className="hero-float absolute top-10 -left-12 rounded-2xl px-4 py-3 flex items-center gap-3"
               style={{
-                background: "rgba(255,255,255,0.07)",
+                background: "rgba(255,255,255,0.85)",
                 backdropFilter: "blur(18px)",
                 WebkitBackdropFilter: "blur(18px)",
-                border: "1px solid rgba(255,255,255,0.12)",
-                boxShadow: "0 8px 32px rgba(0,0,0,0.25)",
+                border: "1px solid rgba(14,165,233,0.25)",
+                boxShadow: "0 8px 32px rgba(14,165,233,0.15)",
               }}
             >
-              <ShieldCheck className="w-5 h-5 text-mint flex-shrink-0" />
+              <ShieldCheck className="w-5 h-5 flex-shrink-0" style={{ color: "#0EA5E9" }} />
               <div>
-                <p className="text-[12px] font-body font-semibold text-white leading-none mb-0.5">
+                <p className="text-[12px] font-body font-semibold leading-none mb-0.5" style={{ color: "#0C1A2E" }}>
                   Govt. Registered
                 </p>
-                <p className="text-[10px] font-body" style={{ color: "rgba(239,233,213,0.5)" }}>
-                  MTP Specialist
+                <p className="text-[10px] font-body" style={{ color: "rgba(12,26,46,0.5)" }}>
+                  Founder & Sonologist
                 </p>
               </div>
             </div>
@@ -486,19 +506,19 @@ export default function Hero() {
             <div
               className="hero-float absolute top-[38%] -right-12 rounded-2xl px-4 py-3 flex items-center gap-3"
               style={{
-                background: "rgba(255,255,255,0.07)",
+                background: "rgba(255,255,255,0.85)",
                 backdropFilter: "blur(18px)",
                 WebkitBackdropFilter: "blur(18px)",
-                border: "1px solid rgba(255,255,255,0.12)",
-                boxShadow: "0 8px 32px rgba(0,0,0,0.25)",
+                border: "1px solid rgba(14,165,233,0.25)",
+                boxShadow: "0 8px 32px rgba(14,165,233,0.15)",
               }}
             >
-              <Globe className="w-5 h-5 text-mint flex-shrink-0" />
+              <Globe className="w-5 h-5 flex-shrink-0" style={{ color: "#0EA5E9" }} />
               <div>
-                <p className="text-[12px] font-body font-semibold text-white leading-none mb-0.5">
+                <p className="text-[12px] font-body font-semibold leading-none mb-0.5" style={{ color: "#0C1A2E" }}>
                   25+ Countries
                 </p>
-                <p className="text-[10px] font-body" style={{ color: "rgba(239,233,213,0.5)" }}>
+                <p className="text-[10px] font-body" style={{ color: "rgba(12,26,46,0.5)" }}>
                   Patients Served
                 </p>
               </div>
@@ -508,22 +528,22 @@ export default function Hero() {
             <div
               className="hero-float absolute bottom-10 -left-10 rounded-2xl px-4 py-3"
               style={{
-                background: "rgba(255,255,255,0.07)",
+                background: "rgba(255,255,255,0.85)",
                 backdropFilter: "blur(18px)",
                 WebkitBackdropFilter: "blur(18px)",
-                border: "1px solid rgba(255,255,255,0.12)",
-                boxShadow: "0 8px 32px rgba(0,0,0,0.25)",
+                border: "1px solid rgba(14,165,233,0.25)",
+                boxShadow: "0 8px 32px rgba(14,165,233,0.15)",
               }}
             >
               <div className="flex gap-0.5 mb-1.5">
                 {[1, 2, 3, 4, 5].map((n) => (
-                  <Star key={n} className="w-3 h-3 fill-mint text-mint" />
+                  <Star key={n} className="w-3 h-3" style={{ fill: "#0EA5E9", color: "#0EA5E9" }} />
                 ))}
               </div>
-              <p className="text-[12px] font-body font-semibold text-white leading-none mb-0.5">
+              <p className="text-[12px] font-body font-semibold leading-none mb-0.5" style={{ color: "#0C1A2E" }}>
                 500+ Int&apos;l Patients
               </p>
-              <p className="text-[10px] font-body" style={{ color: "rgba(239,233,213,0.5)" }}>
+              <p className="text-[10px] font-body" style={{ color: "rgba(12,26,46,0.5)" }}>
                 Trusted Globally
               </p>
             </div>
@@ -537,11 +557,11 @@ export default function Hero() {
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-float z-10">
         <span
           className="text-[10px] font-body tracking-widest uppercase"
-          style={{ color: "rgba(113,187,178,0.5)" }}
+          style={{ color: "rgba(14,165,233,0.6)" }}
         >
           Scroll
         </span>
-        <ArrowDown className="w-4 h-4" style={{ color: "rgba(113,187,178,0.5)" }} />
+        <ArrowDown className="w-4 h-4" style={{ color: "rgba(14,165,233,0.6)" }} />
       </div>
     </section>
   );

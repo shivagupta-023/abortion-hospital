@@ -73,7 +73,7 @@ export default function IntroAnimation({ onComplete }) {
   }
       <div
     ref={lineRef}
-    className="w-32 h-[3px] bg-teal mb-12 origin-center"
+    className="w-20 sm:w-28 md:w-32 h-[3px] bg-[#0EA5E9] mb-8 sm:mb-12 origin-center"
     style={{ transform: "scaleX(0.3)" }}
   />
 
@@ -81,18 +81,18 @@ export default function IntroAnimation({ onComplete }) {
     /* Animated text */
   }
       <div ref={textRef} className="text-center px-4">
-        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-teal leading-tight tracking-tight">
+        <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-medium leading-tight tracking-tight" style={{ color: "#0C1A2E" }}>
           {words.map((word, i) => <span
     key={i}
-    className="intro-word inline-block mx-1 sm:mx-2"
+    className="intro-word inline-block mx-0.5 sm:mx-1 md:mx-2"
     style={{ opacity: 0 }}
   >
               {word}
             </span>)}
         </h1>
         <p
-    className="intro-word mt-6 text-sm sm:text-base md:text-lg text-teal/60 font-body tracking-widest uppercase"
-    style={{ opacity: 0 }}
+    className="intro-word mt-6 text-sm sm:text-base md:text-lg font-body tracking-widest uppercase"
+    style={{ color: "rgba(12,26,46,0.6)", opacity: 0 }}
   >
           Aashirwad Health Centre
         </p>
@@ -103,7 +103,7 @@ export default function IntroAnimation({ onComplete }) {
   }
       <div
     ref={circleRef}
-    className="absolute w-20 h-20 rounded-full border-4 border-teal/30"
+    className="absolute w-20 h-20 rounded-full border-4 border-[rgba(14,165,233,0.3)]"
     style={{ opacity: 0, transform: "scale(0)" }}
   />
     </div>;

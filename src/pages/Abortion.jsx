@@ -10,7 +10,7 @@ export default function Abortion() {
       <Hero />
       <TypesSection />
       <ProcessSection />
-      <DoctorsSection />
+      {/* <DoctorsSection /> */}
       <FaqCtaSection />
     </main>
   );

@@ -8,10 +8,17 @@ import PatientJourney from './pages/PatientJourney';
 import Abortion from './pages/Abortion';
 import Doctors from './pages/Doctors';
 import Contact from './pages/Contact';
+import About from './pages/About';
+import Legal from './pages/Legal';
 
 function AppContent() {
   const { loading } = useTransition();
   const location = useLocation();
+
+  // Scroll to top on every route change
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, [location.pathname]);
 
   // Show loader on initial page load for non-home pages
   const [initLoading, setInitLoading] = useState(
@@ -34,7 +41,9 @@ function AppContent() {
           <Route path="/patient-journey" element={<PatientJourney />} />
           <Route path="/abortion" element={<Abortion />} />
           <Route path="/doctors" element={<Doctors />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/about-us" element={<About />} />
+          <Route path="/legal" element={<Legal />} />
         </Route>
       </Routes>
     </>

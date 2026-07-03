@@ -7,36 +7,36 @@ gsap.registerPlugin(ScrollTrigger);
 const faqs = [
   {
     q: "Is abortion legal in India?",
-    a: "Yes. Abortion is legal in India under the Medical Termination of Pregnancy (MTP) Act, which permits procedures up to 24 weeks under specific conditions. Our clinic is government-registered (DL/MTP/86/SED/2020) and operates fully within Indian law."
+    a: "Yes. Abortion is legal in India under the Medical Termination of Pregnancy (MTP) Act, which permits the procedure up to 24 weeks under specific conditions. Our facility is government-registered and operates fully within Indian law."
   },
   {
-    q: "How long should I stay in India?",
-    a: "Most international patients stay for 2 days. Day 1 covers your consultation, tests, ultrasound, and procedure. Day 2 is for your follow-up scan to confirm safe recovery. After clearance from the doctor, you are free to fly home."
+    q: "Can an unmarried or single woman have an abortion?",
+    a: "Yes. An unmarried or single woman can safely and legally terminate an unwanted pregnancy up to 24 weeks. No partner or spouse consent is required — only the woman's own consent."
   },
   {
-    q: "How quickly can I get a medical visa?",
-    a: "We issue a Medical Invitation Letter the same day as your online consultation. With this letter you can apply for an India medical visa, which is typically processed within 3–5 business days. Our coordinator guides you through the entire visa process."
+    q: "What documents do I need?",
+    a: "Only a valid ID proof and the written consent of the woman are required. Our trained staff handle all other formalities for you."
   },
   {
-    q: "Is airport pickup included?",
-    a: "Yes. A private driver will be waiting for you at the airport on your arrival. We arrange all ground transportation — airport pickup, hospital transfers, guest house drop, and airport drop on departure — at no extra charge."
+    q: "Is the procedure painful?",
+    a: "No. The procedure is performed under anaesthesia and is completely pain-free. It takes only about 15 minutes, with no cuts, marks, or stitches."
   },
   {
-    q: "Can someone accompany me?",
-    a: "Absolutely. You are welcome to bring a partner, friend, or family member. We can arrange accommodation for your companion at the guest house and include them in all transportation. Just inform our coordinator when booking."
+    q: "Will an abortion affect my future fertility?",
+    a: "No. When performed by an experienced gynaecologist at a registered centre, the procedure does not affect your future fertility."
   },
   {
-    q: "Is my treatment completely confidential?",
-    a: "Yes. Patient privacy is protected at every stage. Your records are not shared with anyone without your explicit consent. We have a discreet clinic entrance, private consultation rooms, and strict data security protocols."
+    q: "Is everything kept confidential?",
+    a: "Yes. Your privacy is protected at every stage — from your first call to your follow-up. Your records are never shared without your consent."
   },
   {
-    q: "What payment methods are accepted?",
-    a: "We accept international bank transfers, credit/debit cards (Visa, Mastercard), and cash in INR or USD. Payment details are shared securely by your coordinator after consultation. No advance payment is required to book."
+    q: "Are international patients welcome?",
+    a: "Yes. We proudly care for patients from many countries. We also arrange visa support, airport pickup, guest-house stay, meals, and a follow-up scan before you travel home."
   },
   {
-    q: "How soon can I fly back after the procedure?",
-    a: "Most patients are cleared to fly home on Day 2, after their follow-up scan. The doctor will confirm fitness to travel based on your individual recovery. Short-haul and long-haul flights are both typically permitted within 24–48 hours."
-  }
+    q: "Is it safe to buy abortion pills from a chemist?",
+    a: "No. Abortion pills should only be taken under the supervision of a qualified gynaecologist after an ultrasound. Self-medication can cause serious, life-threatening complications."
+  },
 ];
 
 export default function FAQs() {
@@ -69,15 +69,18 @@ export default function FAQs() {
     <section ref={sectionRef} className="section-padding bg-white">
       <div className="container-main max-w-4xl">
         <div className="text-center mb-8 md:mb-10">
-          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-2 mb-4">
-            <HelpCircle className="w-4 h-4 text-mint" />
-            <span className="text-xs font-body text-teal/70 tracking-wide">International Patients — Common Questions</span>
+          <div
+            className="inline-flex items-center gap-2 rounded-full px-4 py-2 mb-4"
+            style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(14,165,233,0.2)", backdropFilter: "blur(8px)" }}
+          >
+            <HelpCircle className="w-4 h-4" style={{ color: "#0EA5E9" }} />
+            <span className="text-xs font-body tracking-wide" style={{ color: "rgba(12,26,46,0.7)" }}>Common Questions — Answered Honestly</span>
           </div>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-teal mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold mb-4" style={{ color: "#0C1A2E" }}>
             Frequently Asked Questions
           </h2>
-          <p className="text-sm sm:text-base font-body text-teal/60 max-w-xl mx-auto">
-            Everything you need to know before traveling to India for care.
+          <p className="text-sm sm:text-base font-body max-w-xl mx-auto" style={{ color: "rgba(12,26,46,0.6)" }}>
+            Clear, honest answers to the questions most women ask before reaching out to us.
           </p>
         </div>
 
@@ -85,26 +88,28 @@ export default function FAQs() {
           {faqs.map((faq) => (
             <div
               key={faq.q}
-              className="faq-item glass rounded-xl overflow-hidden transition-all duration-300 hover:shadow-glass"
+              className="faq-item rounded-xl overflow-hidden transition-all duration-300"
+              style={{ background: "rgba(255,255,255,0.9)", border: "1px solid rgba(14,165,233,0.18)", backdropFilter: "blur(8px)" }}
             >
               <button
                 type="button"
                 onClick={() => setOpenFaq(openFaq === faq.q ? null : faq.q)}
                 className="w-full flex items-center justify-between p-4 sm:p-5 text-left"
               >
-                <span className="font-display font-medium text-teal text-sm sm:text-base pr-4">
+                <span className="font-display font-medium text-sm sm:text-base pr-4" style={{ color: "#0C1A2E" }}>
                   {faq.q}
                 </span>
                 <ChevronDown
-                  className={`w-5 h-5 text-mint flex-shrink-0 transition-transform duration-300 ${openFaq === faq.q ? "rotate-180" : ""}`}
+                  className={`w-5 h-5 flex-shrink-0 transition-transform duration-300 ${openFaq === faq.q ? "rotate-180" : ""}`}
+                  style={{ color: "#0EA5E9" }}
                 />
               </button>
               <div
-                className={`overflow-hidden transition-all duration-300 ${openFaq === faq.q ? "max-h-64" : "max-h-0"}`}
+                className={`overflow-hidden transition-all duration-300 ${openFaq === faq.q ? "max-h-96 sm:max-h-64" : "max-h-0"}`}
               >
                 <div className="px-4 sm:px-5 pb-4 sm:pb-5">
-                  <div className="h-px bg-mint/20 mb-3" />
-                  <p className="text-xs sm:text-sm font-body text-teal/60 leading-relaxed">
+                  <div className="h-px mb-3" style={{ background: "rgba(14,165,233,0.2)" }} />
+                  <p className="text-xs sm:text-sm font-body leading-relaxed" style={{ color: "rgba(12,26,46,0.6)" }}>
                     {faq.a}
                   </p>
                 </div>

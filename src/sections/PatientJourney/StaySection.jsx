@@ -12,13 +12,13 @@ const days = [
     num: "01",
     label: "Arrival Day",
     tag: "Day of Arrival",
-    color: "#71BBB2",
-    glow: "rgba(113,187,178,0.12)",
-    border: "rgba(113,187,178,0.25)",
+    color: "#0EA5E9",
+    glow: "rgba(14,165,233,0.12)",
+    border: "rgba(14,165,233,0.25)",
     events: [
       { icon: Car,           time: "On Arrival",  title: "Airport Pickup",         desc: "Private driver meets you at arrivals gate — directly to the guest house."   },
       { icon: Home,          time: "Afternoon",   title: "Guest House Check-in",    desc: "Settle into your private room. Fresh meal provided. Rest as needed."        },
-      { icon: Stethoscope,   time: "Evening",     title: "Doctor Consultation",     desc: "Dr. Rupali reviews your case, answers questions, and confirms the plan."    },
+      { icon: Stethoscope,   time: "Evening",     title: "Doctor Consultation",     desc: "Dr. Rupali Mishra reviews your case, answers questions, and confirms the plan."    },
       { icon: FlaskConical,  time: "Same Day",    title: "Pre-Procedure Tests",     desc: "Blood work and ultrasound completed at the clinic — takes about 1 hour."   },
       { icon: Moon,          time: "Night",       title: "Rest & Prepare",          desc: "Dinner provided. Our coordinator is available if you need anything at all." },
     ],
@@ -27,14 +27,14 @@ const days = [
     num: "02",
     label: "Procedure Day",
     tag: "Day of Procedure",
-    color: "#3a7a72",
-    glow: "rgba(58,122,114,0.12)",
-    border: "rgba(58,122,114,0.28)",
+    color: "#0284C7",
+    glow: "rgba(2,132,199,0.12)",
+    border: "rgba(2,132,199,0.28)",
     events: [
       { icon: Sun,           time: "Morning",     title: "Pre-Procedure Prep",      desc: "Coordinator accompanies you to the clinic. Paperwork completed."           },
-      { icon: HeartPulse,    time: "Late Morning", title: "The Procedure",          desc: "Safe, comfortable procedure under the care of Dr. Rupali's team."          },
+      { icon: HeartPulse,    time: "Late Morning", title: "The Procedure",          desc: "Safe, comfortable procedure under the care of Dr. Rupali Mishra's team."          },
       { icon: ShieldCheck,   time: "Afternoon",   title: "Recovery Room",           desc: "2–3 hours of monitored rest in a private room. Refreshments provided."     },
-      { icon: ClipboardCheck,time: "Before Discharge", title: "Doctor Sign-off",   desc: "Dr. Rupali reviews your recovery and confirms you are fit to travel."       },
+      { icon: ClipboardCheck,time: "Before Discharge", title: "Doctor Sign-off",   desc: "Dr. Rupali Mishra reviews your recovery and confirms you are fit to travel."       },
       { icon: PlaneTakeoff,  time: "Evening",     title: "Airport Drop",            desc: "Private vehicle takes you to the airport — on time, with luggage help."    },
     ],
   },
@@ -62,7 +62,7 @@ function DayCard({ day, idx }) {
           <p className="text-[10px] font-body font-semibold uppercase tracking-[0.22em]" style={{ color: day.color }}>
             {day.tag}
           </p>
-          <h3 className="font-display font-semibold text-teal text-lg leading-tight">
+          <h3 className="font-display font-semibold text-lg leading-tight" style={{ color: "#0C1A2E" }}>
             {day.label}
           </h3>
         </div>
@@ -96,7 +96,7 @@ function DayCard({ day, idx }) {
               >
                 {ev.time}
               </span>
-              <p className="font-display font-semibold text-teal text-sm mb-0.5">{ev.title}</p>
+              <p className="font-display font-semibold text-sm mb-0.5" style={{ color: "#0C1A2E" }}>{ev.title}</p>
               <p className="text-[12px] font-body leading-relaxed" style={{ color: "rgba(15,34,51,0.55)" }}>
                 {ev.desc}
               </p>
@@ -145,26 +145,26 @@ export default function StaySection() {
     <section
       ref={sectionRef}
       className="section-padding"
-      style={{ background: "linear-gradient(160deg, #071520 0%, #0c2030 55%, #091c15 100%)" }}
+      style={{ background: "linear-gradient(160deg, #EFF6FF 0%, #DBEAFE 55%, #E0F2FE 100%)" }}
     >
       <div className="container-main">
 
         {/* Header */}
         <div className="stay-header text-center mb-12 md:mb-16">
-          <p className="text-xs font-body font-medium tracking-[0.25em] uppercase text-mint mb-3">
+          <p className="text-xs font-body font-medium tracking-[0.25em] uppercase mb-3" style={{ color: "#0EA5E9" }}>
             What to Expect
           </p>
-          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold text-white mb-4 leading-tight">
+          <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-semibold mb-4 leading-tight" style={{ color: "#0C1A2E" }}>
             Your{" "}
             <span
               className="bg-clip-text text-transparent"
-              style={{ backgroundImage: "linear-gradient(90deg, #71BBB2, #a8e6df)" }}
+              style={{ backgroundImage: "linear-gradient(90deg, #0EA5E9, #38BDF8)" }}
             >
               2 Days
             </span>{" "}
             With Us
           </h2>
-          <p className="text-sm sm:text-base font-body max-w-xl mx-auto" style={{ color: "rgba(239,233,213,0.5)" }}>
+          <p className="text-sm sm:text-base font-body max-w-xl mx-auto" style={{ color: "rgba(12,26,46,0.55)" }}>
             Most patients complete their full treatment and return home within 48 hours — comfortably, safely, and with full support throughout.
           </p>
         </div>
@@ -179,9 +179,9 @@ export default function StaySection() {
         {/* Bottom note */}
         <div
           className="mt-8 md:mt-10 text-center py-4 px-6 rounded-2xl"
-          style={{ background: "rgba(113,187,178,0.07)", border: "1px solid rgba(113,187,178,0.15)" }}
+          style={{ background: "rgba(14,165,233,0.07)", border: "1px solid rgba(14,165,233,0.15)" }}
         >
-          <p className="text-xs font-body" style={{ color: "rgba(239,233,213,0.45)" }}>
+          <p className="text-xs font-body" style={{ color: "rgba(12,26,46,0.55)" }}>
             Every patient's timeline is guided by their doctor. Some procedures may require an extra day of rest — your coordinator will keep you informed at every step.
           </p>
         </div>

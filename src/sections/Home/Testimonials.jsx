@@ -74,7 +74,7 @@ const row2 = [
 function TestimonialCard({ flag, country, quote, theme, accent }) {
   return (
     <div
-      className="flex-shrink-0 w-72 sm:w-80 rounded-2xl p-5 sm:p-6 relative overflow-hidden"
+      className="flex-shrink-0 w-[80vw] sm:w-72 md:w-80 rounded-2xl p-4 sm:p-5 md:p-6 relative overflow-hidden"
       style={{
         background: "rgba(255,255,255,0.04)",
         border: "1px solid rgba(113,187,178,0.1)",
@@ -135,7 +135,7 @@ export default function Testimonials() {
       className="py-12 md:py-16 overflow-hidden"
       style={{ background: "linear-gradient(135deg, #071520 0%, #0f2233 50%, #1a3a52 100%)" }}
     >
-      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center mb-7 md:mb-10">
+      <div className="container-main text-center mb-7 md:mb-10">
         <p className="text-xs font-body font-medium tracking-[0.25em] uppercase text-mint mb-3">
           International Patient Stories
         </p>
@@ -166,7 +166,7 @@ export default function Testimonials() {
         </div>
       </div>
 
-      <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto mt-10 md:mt-14">
+      <div className="container-main mt-10 md:mt-14">
         <div className="flex items-center justify-center gap-2 flex-wrap">
           <ShieldCheck className="w-4 h-4 text-mint flex-shrink-0" />
           <p className="text-xs font-body" style={{ color: "rgba(239,233,213,0.45)" }}>
